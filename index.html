@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Transaction Table</title>
+  </head>
+  <body class="bg-dark">
+    <div class="container">
+      <table class="table caption-top">
+        <caption class="text-white text-center h1">
+          Transaction Table
+          <div class="search w-50 mx-auto py-2">
+            <input
+              type="text"
+              id="search"
+              class="form-control"
+              placeholder="Search by amount or Name"
+            />
+          </div>
+        </caption>
+
+        <thead>
+          <tr>
+            <th scope="col" class="text-white border text-center">ID</th>
+            <th scope="col" class="text-white border text-center">
+              Customer ID
+            </th>
+            <th scope="col" class="text-white border text-center">Name</th>
+            <th scope="col" class="text-white border text-center">Date</th>
+            <th scope="col" class="text-white border text-center">Amount</th>
+            <th scope="col" class="text-white border text-center">Details</th>
+          </tr>
+        </thead>
+        <tbody id="data">
+          <!-- Populate the table with transaction data -->
+        </tbody>
+      </table>
+    </div>
+    <div class="status">
+      <button
+        class="btn bg-transparent border-danger text-danger rounded-3 p-3"
+        id="closeBtn"
+      >
+        X
+      </button>
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
